@@ -1,0 +1,112 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css?family=Exo:400,700");
+
+/*
+    Title:          Neo's portfolio (Final Project)
+    Author:         Neo Lee (W0435748)
+    Date:           Dec 01, 2019
+    Description:    Make a personal portfolio pages
+    
+*/
+
+/* Flexable design ---------------------------------------------------------- */
+/* Base Styles */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  font-family: "Exo", sans-serif;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 480px) {
+  #flex_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 481px) {
+  #flex_main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 769px) {
+  #flex_main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/* background animation ----------------------------------------------------- */
+.context {
+  width: 100%;
+  position: absolute;
+  top: 5vh;
+}
+
+.context h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+}
+
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  /* background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%); */
+  background-image: linear-gradient(-60deg, rgb(57, 172, 207) 50%, rgb(167, 45, 248) 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+
+.content {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.25em;
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  left: 50%;
+  padding: 10vmin;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+/* other styles ------------------------------------------------------------- */
+button[class^="btn"] {
+  width: 12rem;
+  height: 7rem;
+}

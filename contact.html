@@ -1,0 +1,142 @@
+<!-- 
+    Title:          Neo's portfolio (Final Project)
+    Author:         Neo Lee (W0435748)
+    Date:           Dec 02, 2019
+    Description:    Make a personal portfolio pages (Contact page)
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Neo's Portfolio (Contact)</title>
+
+    <!-- import Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- import style sheet -->
+    <link rel="stylesheet" href="./styles/c_styles.css" />
+
+    <!-- import style sheet for profile card -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
+  <body>
+    <!-- header image -->
+    <div class="card bg-dark text-primary">
+      <img class="card-img" src="./images/header_img.jpg" alt="Card image" height="100px" width="100%" />
+      <div class="card-img-overlay">
+        <h1 class="card-title">Neo's Portfolio</h1>
+        <!-- <p class="card-text">This page presents my contact information</p> -->
+        <!-- <p class="card-text"></p> -->
+      </div>
+    </div>
+    <!-- Navigation menu -->
+    <div class="card text-center">
+      <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./goals.html">Goals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./skills.html">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./resume.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./work_sample.html">Work Samples</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- profile card -->
+    <div class="card-body">
+      <div class="pcard">
+        <img src="./images/MyEmoji_2.gif" alt="Neo Lee" style="width:100%" />
+        <h1>Neo Lee</h1>
+        <p class="title">Student</p>
+        <p>NSCC IT Campus</p>
+        <p>902)412-7174</p>
+        <div style="margin: 24px 0;">
+          <a class="contact" href=""><i class="fa fa-dribbble"></i></a>
+          <a class="contact" href="#"><i class="fa fa-twitter"></i></a>
+          <a class="contact" href="https://github.com/NeoLee-0435748" target="blank"><i class="fa fa-github"></i></a>
+          <a class="contact" href="https://www.facebook.com/neo.lee.90226628" target="blank"><i class="fa fa-facebook"></i></a>
+        </div>
+        <p><button class="btn_contact" data-toggle="modal" data-target="#contactModal">Contact</button></p>
+      </div>
+    </div>
+
+    <!-- modal box for contact -->
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Contact</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="contact_container">
+              <form action="#" onsubmit="return false">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name.." />
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
+
+                <label for="country">Country</label>
+                <select id="country" name="country"></select>
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <button type="submit" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                <!-- <input type="submit" value="Submit" /> -->
+              </form>
+            </div>
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- import bootstrap script -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- import script -->
+    <script src="./scripts/c_scripts.js"></script>
+  </body>
+</html>

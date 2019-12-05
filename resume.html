@@ -1,0 +1,180 @@
+<!-- 
+    Title:          Neo's portfolio (Final Project)
+    Author:         Neo Lee (W0435748)
+    Date:           Dec 03, 2019
+    Description:    Make a personal portfolio pages (Resume)
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Neo's Portfolio (Resume)</title>
+
+    <!-- import Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- import style sheet -->
+    <link rel="stylesheet" href="./styles/r_styles.css" />
+  </head>
+  <body>
+    <!-- header image -->
+    <div class="card bg-dark text-warning">
+      <img class="card-img" src="./images/header_img.jpg" alt="Card image" height="100px" width="100%" />
+      <div class="card-img-overlay">
+        <h1 class="card-title">Neo's Portfolio</h1>
+        <!-- <p class="card-text">This page presents my contact information</p> -->
+        <!-- <p class="card-text"></p> -->
+      </div>
+    </div>
+    <!-- Navigation menu -->
+    <div class="card text-center">
+      <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./goals.html">Goals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./skills.html">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./work_sample.html">Work Samples</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body">
+        <!-- key skills -->
+        <table id="tbl_key_skills">
+          <thead>
+            <tr>
+              <th colspan="2"><h3>Key Skills</h3></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td_ks_1">Fast Learner&nbsp;<span>&CircleDot;</span></td>
+              <td class="td_ks_2"><span>&CircleDot;</span>&nbsp;Strong Decision Maker</td>
+            </tr>
+            <tr>
+              <td class="td_ks_1">Complex Problem Solver&nbsp;<span>&CircleDot;</span></td>
+              <td class="td_ks_2"><span>&CircleDot;</span>&nbsp;Dedicated / Hard worker</td>
+            </tr>
+            <tr>
+              <td class="td_ks_1">&nbsp;</td>
+              <td class="td_ks_2"><span>&CircleDot;</span>&nbsp;Many experiences in business field</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Technical skills -->
+        <table id="tbl_technical_skills">
+          <thead>
+            <tr>
+              <th colspan="2"><h3>Technical Skills</h3></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td_ts_1">Operating Systems</td>
+              <td class="td_ts_2"><span>&Sqrt;</span>&nbsp;Windows 95-XP, NT, and 7/10, Linux</td>
+            </tr>
+            <tr>
+              <td class="td_ts_1">Programming Languages</td>
+              <td class="td_ts_2"><span>&Sqrt;</span>&nbsp;Javascript, HTML5, CSS3, Java, C, and SQL</td>
+            </tr>
+            <tr>
+              <td class="td_ts_1">Databases</td>
+              <td class="td_ts_2"><span>&Sqrt;</span>&nbsp;MySQL, SQLite, and Oracle</td>
+            </tr>
+            <tr>
+              <td class="td_ts_1">Internet</td>
+              <td class="td_ts_2"><span>&Sqrt;</span>&nbsp;Internet Explorer, and Chrome</td>
+            </tr>
+            <tr>
+              <td class="td_ts_1">Office Applications</td>
+              <td class="td_ts_2"><span>&Sqrt;</span>&nbsp;Microsoft office suite (Word, Excel, and PowerPoint)</td>
+            </tr>
+            <tr>
+              <td class="td_ts_1">Others</td>
+              <td class="td_ts_2"><span>&Sqrt;</span>&nbsp;VS code, GitHub, Visio, Drawio</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Education -->
+        <table id="tbl_education">
+          <thead>
+            <tr>
+              <th colspan="2"><h3>Education</h3></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="2"><h5>IN PROGRESS: IT WEB Programming / NSCC IT Campus, Halifax</h5></td>
+            </tr>
+            <tr>
+              <td colspan="2"><h6>First Year</h6></td>
+            </tr>
+            <tr>
+              <td class="td_ed_1">
+                <p>---&lt; First semester &gt;---</p>
+                <ul>
+                  <li>Logic and Programming (Javascript)</li>
+                  <li>Website Development (HTML5, CSS3)</li>
+                  <li>Data fundamentals (Database, SQL)</li>
+                  <li>Introduction to Windows Administration (Windows 10 Pro)</li>
+                  <li>Introduction to Networking and Security (CCENT)</li>
+                </ul>
+              </td>
+              <td class="td_ed_2">
+                <p>---&lt; Second semester &gt;---</p>
+                <ul>
+                  <li>User Interface Design and Development (UML)</li>
+                  <li>Operating Systems (Linux)</li>
+                  <li>Web Server Fundamentals (Apache, IIS, Tomcat)</li>
+                  <li>Object Oriented Programming (Java)</li>
+                  <li>Client side programming (PHP)</li>
+                  <li>Systems analysis and design (AD)</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- import bootstrap script -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- import script -->
+  </body>
+</html>

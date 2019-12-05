@@ -1,0 +1,127 @@
+<!-- 
+    Title:          Neo's portfolio (Final Project)
+    Author:         Neo Lee (W0435748)
+    Date:           Dec 01, 2019
+    Description:    Make a personal portfolio pages (Goals)
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Neo's Portfolio (Goals)</title>
+
+    <!-- import Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- import style sheet -->
+    <!-- <link rel="stylesheet" href="./styles/init_styles.css" /> -->
+    <link rel="stylesheet" href="./styles/g_styles.css" />
+  </head>
+  <body>
+    <!-- header image -->
+    <div class="card bg-dark text-secondary">
+      <img class="card-img" src="./images/header_img.jpg" alt="Card image" height="100px" width="100%" />
+      <div class="card-img-overlay">
+        <h1 class="card-title">Neo's Portfolio</h1>
+        <!-- <p class="card-text">This page presents my contact information</p> -->
+        <!-- <p class="card-text"></p> -->
+      </div>
+    </div>
+    <!-- Navigation menu -->
+    <div class="card text-center">
+      <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Goals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./skills.html">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./resume.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./work_sample.html">Work Samples</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body">
+        <div class="tab">
+          <button class="tablinks" id="btn_career">Career</button>
+          <button class="tablinks" id="btn_financial">Financial</button>
+          <button class="tablinks" id="btn_family">Family</button>
+          <button class="tablinks" id="btn_pleasure">Pleasure</button>
+        </div>
+        <!-- Career section -->
+        <div id="div_career" class="tabcontent">
+          <h3>Career</h3>
+          <ul>
+            <li>Get a job for my life and fun</li>
+            <li>Frontend Developer</li>
+            <li>Backend Developer</li>
+            <li>Fullstack Developer</li>
+          </ul>
+        </div>
+        <!-- Financial section -->
+        <div id="div_financial" class="tabcontent">
+          <h3>Financial</h3>
+          <ul>
+            <li>Make a loan to 0</li>
+            <li>Buy a Audi Q7 (used one)</li>
+            <li>Save the money to TFSA</li>
+            <li>Save the money for my sons education</li>
+          </ul>
+        </div>
+        <!-- Family section -->
+        <div id="div_family" class="tabcontent">
+          <h3>Family</h3>
+          <ul>
+            <li>Travel to Grand Canyou in 2021</li>
+          </ul>
+        </div>
+        <!-- Pleasure section -->
+        <div id="div_pleasure" class="tabcontent">
+          <h3>Pleasure</h3>
+          <ul>
+            <li>Go bible training after retirement</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- import bootstrap script -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- import script -->
+    <script src="./scripts/g_scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+/* 
+    Title:          Neo's portfolio (Final Project)
+    Author:         Neo Lee (W0435748)
+    Date:           Dec 03, 2019
+    Description:    Make a personal portfolio pages (Skills page)
+
+ */
+
+table {
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 2px solid lightblue;
+}

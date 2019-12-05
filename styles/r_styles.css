@@ -1,0 +1,62 @@
+/* 
+    Title:          Neo's portfolio (Final Project)
+    Author:         Neo Lee (W0435748)
+    Date:           Dec 03, 2019
+    Description:    Make a personal portfolio pages (Goals page)
+
+ */
+/* for sub title */
+h3 {
+  border-bottom: 4px double coral;
+  width: 100%;
+  text-align: center;
+  text-shadow: 2px 5px 12px black;
+}
+
+/* for tables */
+table {
+  border-collapse: separate;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+.td_ks_1,
+.td_ts_1 {
+  text-align: right;
+  width: 50%;
+  padding-right: 3rem;
+}
+.td_ks_2,
+.td_ts_2 {
+  text-align: left;
+  width: 50%;
+  padding-left: 3rem;
+}
+
+span {
+  color: blue;
+  font-style: bold;
+}
+
+/* for sub-sub title */
+h5 {
+  text-align: left;
+  border-bottom: 1px double coral;
+}
+
+h6 {
+  text-align: left;
+  border-bottom: 1px double coral;
+}
+
+.td_ed_1,
+.td_ed_2 {
+  width: 50%;
+  vertical-align: top;
+}

@@ -1,0 +1,236 @@
+/*
+  Student Name:   Neo Lee(W0435748)
+  Date:           Nov 28, 2019  
+  Program Title:  COUNTRIES OF THE WORLD
+*/
+
+/*
+----------------------------------------------------- 
+ Reset Style Sheet                                          
+-----------------------------------------------------
+*/
+address,
+article,
+aside,
+blockquote,
+body,
+cite,
+div,
+dl,
+dt,
+dd,
+em,
+figcaption,
+figure,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+img,
+li,
+main,
+nav,
+ol,
+p,
+section,
+span,
+ul {
+  background: transparent;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/*
+----------------------------------------------------- 
+ layout define                                            
+-----------------------------------------------------
+*/
+
+/* define body part */
+body {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  min-width: 640px;
+  max-width: 960px;
+  background-color: rgb(208, 211, 212);
+}
+
+/* layout with grid 1row 3columes */
+#main_grid {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 35% 5% 60%;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+#sec_left {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  /* background-color: rgb(136, 173, 241); */
+}
+
+#sec_middle {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+#sec_right {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  /* background-color: #2196f3; */
+}
+
+/*
+----------------------------------------------------- 
+ font define
+-----------------------------------------------------
+*/
+h1 {
+  font-family: "Rancho", serif;
+  font-size: 48px;
+}
+
+h3 {
+  font-family: "Orbitron", sans-serif;
+}
+
+#h2_country_name {
+  font-family: "Monoton", cursive;
+  font-size: 2em;
+}
+
+footer > h4 {
+  font-family: "Playfair Display SC", serif;
+  font-size: 1em;
+  color: white;
+}
+
+/*
+----------------------------------------------------- 
+ each section styling
+-----------------------------------------------------
+*/
+
+/* grid outline ------------------------------------- */
+#main_grid {
+  border-style: solid;
+  border-width: thin;
+  border-color: gray;
+  margin-bottom: 0.1rem;
+}
+
+/* header ------------------------------------------- */
+header {
+  margin-top: 1em;
+  text-align: center;
+}
+
+/* left section ------------------------------------- */
+#sec_left {
+  padding-left: 0.4rem;
+  padding-top: 1rem;
+}
+
+#sec_left > #sel_country {
+  margin-top: 0.3rem;
+  width: 97%;
+}
+
+/* middle section ---------------------------------- */
+#sec_middle > #btn_direction {
+  margin-top: 30%;
+  height: 97%;
+}
+
+/* right section ----------------------------------- */
+/* table border check
+#sec_right table,
+th,
+td {
+  border: 1px solid black;
+} */
+
+#sec_right {
+  padding-left: 0.4rem;
+  margin-right: 0.6rem;
+}
+
+#sec_right table {
+  margin-top: 0.3rem;
+  width: 97%;
+}
+
+#sec_right td {
+  width: 70%;
+}
+
+#sec_right #img_country_flag {
+  height: 250px;
+  width: 100%;
+}
+
+#sec_right button[id^="btn"] {
+  height: 8rem;
+  width: 90%;
+  margin-left: 5%;
+}
+
+#sec_right h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+#sec_right input[id^="txt"] {
+  width: 97%;
+  margin-bottom: 0.5rem;
+  padding-left: 0.4rem;
+}
+
+#sec_right #sel_country_square {
+  width: 97%;
+  margin-bottom: 0.2rem;
+}
+
+#sec_right #div_density {
+  width: 97%;
+  border-style: solid;
+  border-width: thin;
+  border-color: gray;
+  padding: 0.3rem;
+}
+
+#sec_right #div_density input[id^="txt"] {
+  width: 100%;
+}
+
+/* footer ------------------------------------------ */
+footer {
+  height: 30px;
+  background-color: black;
+  text-align: center;
+}
+
+footer > h4 {
+  /* for center position */
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,88 @@
+/* 
+    Title:          NSCC Application Form (Final Project)
+    Author:         Neo Lee (W0435748)
+    Date:           Nov 7, 2019
+    Description:    Create NSCC application form and related with server
+
+ */
+
+
+/* html style */
+
+html {
+    background-color: rgb(207, 207, 207);
+}
+
+
+/* body style */
+
+body {
+    display: border;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+    min-width: 960px;
+    background-color: white;
+}
+
+
+/* header style */
+
+header {
+    display: block;
+    height: 60px;
+    background-color: blue;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    background-color: blue;
+    color: white;
+    /* for center position */
+    margin: 0;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+
+/* table style */
+
+table#main_table {
+    table-layout: fixed;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    border-collapse: collapse;
+    background-color: rgb(228, 231, 224);
+    /* border: 1px black solid; */
+}
+
+table#main_table td,
+th {
+    width: 5%;
+    /* border: 1px black solid; */
+    padding: 5px;
+    background-color: rgb(228, 231, 224);
+}
+
+
+/* for required element */
+
+:required {
+    background-color: moccasin;
+}
+
+
+/* for specific element */
+
+table#main_table td#further_info {
+    background-color: rgb(222, 238, 248);
+}
+
+table#main_table .empty_row {
+    background-color: white;
+}

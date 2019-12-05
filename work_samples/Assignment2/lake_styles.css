@@ -1,0 +1,252 @@
+﻿/* definition of the character encording */
+
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   Great Lakescape Lodge Style Sheet
+   Author: Neo Lee (W0435748)
+   Date:   Sept 26, 2019
+   
+   Filename: lake_styles.css
+
+*/
+
+
+/* --- Application of web fonts */
+
+@font-face {
+    font-family: CacChampagne;
+    src: url('cac_champagne.woff') format('woff'), url('cac_champagne.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: CobkinPlain;
+    src: url('DobkinPlain.woff') format('woff'), url('DobkinPlain.ttf') format('truetype');
+}
+
+
+/* --- General styling */
+
+html {
+    background-color: #7b9ce8;
+}
+
+body {
+    color: rgb(#aa, #aa, #aa);
+    background-color: Cornsilk;
+}
+
+
+/* --- header section styling */
+
+header nav {
+    height: 2rem;
+    padding-top: 5px;
+}
+
+header>nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-variant: small-caps;
+}
+
+header a:hover {
+    -webkit-animation: ha_move 3s infinite;
+    /* Safari 4.0 - 8.0 */
+    animation: ha_move 3s infinite;
+}
+
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes ha_move {
+    50% {
+        color: blue;
+        text-decoration: underline;
+    }
+}
+
+@keyframes ha_move {
+    50% {
+        color: blue;
+        text-decoration: underline;
+    }
+}
+
+
+/* --- left section styling */
+
+
+/* remove right margin */
+
+body>section#leftcol {
+    margin-right: 0% !important;
+}
+
+
+/* Welcome title */
+
+section#leftcol>h1 {
+    font-family: CacChampagne, Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    /*font-weight: bold;*/
+    letter-spacing: 0.3em;
+    padding-left: 3%;
+}
+
+
+/* All paragraph */
+
+section#leftcol>p {
+    color: lightslategray;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    padding-left: 3%;
+}
+
+
+/* Common in Notes and Upcomming */
+
+section#leftcol>aside>h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+/* Notes part */
+
+section#leftcol aside:first-of-type {
+    color: darkslategrey;
+    background-color: lightsalmon;
+}
+
+section#leftcol aside:first-of-type>ul {
+    list-style-type: circle;
+}
+
+
+/* Upcoming event part */
+
+section#leftcol aside:last-of-type {
+    color: darkslategray;
+    background-color: gold;
+}
+
+section#leftcol aside:last-of-type>h2 {
+    padding-left: 1.5%;
+}
+
+section#leftcol aside:last-of-type>p {
+    padding-left: 5%;
+}
+
+
+/* --- right section styling */
+
+
+/* change width and remove right margin */
+
+section#rightcol {
+    width: 30% !important;
+    margin-right: 0% !important;
+}
+
+section#rightcol {
+    text-decoration-color: blueviolet;
+    background-color: hsl(265, 20%, 72%);
+    background-color: hsla(265, 20%, 72%, 0.7);
+    padding-left: 3%;
+    height: 100%;
+}
+
+section#rightcol>nav>h2 {
+    font-family: CacChampagne, Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 0.1rem;
+}
+
+
+/*
+section#rightcol ul {
+    list-style-type: none;
+    padding-left: 1em;
+}
+*/
+
+section#rightcol nav ul:nth-child(2) {
+    list-style-type: decimal;
+    padding-left: 1em;
+}
+
+section#rightcol nav ul:nth-child(4) {
+    list-style-type: georgian;
+    padding-left: 1em;
+}
+
+section#rightcol nav ul:nth-child(6) {
+    list-style-type: lower-roman;
+    padding-left: 1em;
+}
+
+section#rightcol a {
+    font-family: CobkinPlain, Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    font-size: 1.2em;
+    letter-spacing: 0.1rem;
+}
+
+section#rightcol a:hover {
+    text-decoration: underline;
+}
+
+section#rightcol blockquote {
+    -webkit-animation: bq_move 5s infinite;
+    /* Safari 4.0 - 8.0 */
+    animation: bq_move 5s infinite;
+    font-size: large;
+    letter-spacing: 0.1em;
+    margin-top: 20%;
+    margin-left: 0%;
+    margin-right: 10%;
+    margin-bottom: 110%;
+}
+
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes bq_move {
+    50% {
+        color: yellow;
+    }
+}
+
+@keyframes bq_move {
+    50% {
+        color: yellow;
+    }
+}
+
+section#rightcol blockquote::before {
+    content: open-quote;
+}
+
+section#rightcol blockquote::after {
+    content: close-quote;
+}
+
+
+/* --- footer section styling */
+
+footer {
+    background-color: darkolivegreen;
+    text-align: center;
+    font-variant: small-caps;
+    color: silver;
+    font-size: small;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}

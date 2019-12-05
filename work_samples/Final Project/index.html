@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>COUNTRIES OF THE WORLD</title>
+
+    <!-- fonts imports -->
+    <link href="https://fonts.googleapis.com/css?family=Rancho&effect=static" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Monoton%7COrbitron%7CPlayfair+Display+SC&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- import external stylesheet -->
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <!-- 
+  Student Name:   Neo Lee(W0435748)
+  Date:           Nov 28, 2019  
+  Program Title:  COUNTRIES OF THE WORLD
+  Description:    Create a dynamic HTML5 website that displays information about any country the user selects from a list.
+                  For any country selected, the application will display the following data:
+                    •	Name of the country
+                    •	An image of the country’s flag
+                    •	The population of the country
+                    •	The country’s total area, shown in sq. miles (by default) or sq. kilometres, 
+                        according to user preference
+                    •	The country’s population density per square mile (by default) or square KM, 
+                        according to user preference
+                    •	The country’s percentage of the total world population
+                  The country data being displayed will change automatically whenever a new country is selected from the list.
+                  On the display for each country a button will be presented to l
+-->
+  <body>
+    <header>
+      <h1 class="font-effect-static">
+        COUNTRIES&nbsp;&nbsp;OF&nbsp;&nbsp;THE&nbsp;&nbsp;WORLD
+      </h1>
+    </header>
+    <!-- left side -->
+    <article id="main_grid">
+      <section id="sec_left">
+        <h3>[ Select a country ]</h3>
+        <select id="sel_country"> </select>
+      </section>
+      <!-- middle button -->
+      <section id="sec_middle">
+        <button id="btn_direction" type="button" class="btn btn-outline-secondary" disabled>
+          >>
+        </button>
+      </section>
+      <!-- right side -->
+      <section id="sec_right">
+        <h3>[ COUNTRY INFORMATION ]</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td rowspan="2">
+                <!-- <img id="img_country_flag" src="" onerror="this.style.display='none'" /> -->
+                <img id="img_country_flag" src="" alt="image for a flag" />
+                <h2 id="h2_country_name"></h2>
+                <!-- <img id="img_country_flag" src="./flags/South_Korea.png" /> -->
+                <!-- <h2 id="h2_country_name">South Korea</h2> -->
+              </td>
+              <td>
+                <button id="btn_wiki" type="button" class="btn btn-success">
+                  Wiki Country
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button id="btn_quiz" type="button" class="btn btn-primary" disabled>
+                  Launch Quiz
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>[ POPULATION ]</h3>
+        <input id="txt_country_pop" type="text" name="txt_country_pop" disabled />
+        <br />
+        <h3>[ AREA IN ]</h3>
+        <select id="sel_country_square">
+          <option id="sqmile" value="1">Sq. Miles</option>
+          <option id="sqkm" value="2">Sq. KM</option>
+        </select>
+        <br />
+        <input id="txt_country_area" type="text" name="txt_country_area" disabled />
+        <br />
+        <h3>[ POPULATION DENSITY ]</h3>
+        <div id="div_density">
+          <input id="rdo_density1" type="radio" name="rdo_density" value="1" checked />
+          Per Square Miles
+          <br />
+          <input id="rdo_density2" type="radio" name="rdo_density" value="2" />
+          Per Square Kilometer
+          <br />
+          <input id="txt_density" type="text" name="txt_density" disabled />
+        </div>
+        <h3>[ PERCENTAGE OF WORLD POPULATION ]</h3>
+        <input id="txt_percentage" type="text" name="txt_percentage" disabled />
+      </section>
+    </article>
+    <footer>
+      <h4>PROG1700(2019) - FINAL PROJECT (CREATED BY NEO LEE)</h4>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

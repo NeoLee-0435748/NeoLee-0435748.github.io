@@ -1,0 +1,312 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 3
+   Case Problem 4
+
+   Park City Gazette Style Sheet
+   Author: Neo Lee (W0435748)
+   Date:   Oct 15, 2019
+
+   Filename:         pcg_paper.css
+   Supporting Files: 
+
+*/
+
+
+/*
+----------------------------------------------------- 
+ Reset Style Sheet                                          
+-----------------------------------------------------
+*/
+
+address,
+article,
+aside,
+blockquote,
+body,
+cite,
+div,
+dl,
+dt,
+dd,
+em,
+figcaption,
+figure,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+img,
+li,
+main,
+nav,
+ol,
+p,
+section,
+span,
+ul {
+    background: transparent;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+
+/*
+----------------------------------------------------- 
+ layout define                                            
+-----------------------------------------------------
+*/
+
+
+/* page works between 640 and 960 px */
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    min-width: 640px;
+    max-width: 960px;
+}
+
+
+/* header image define */
+
+body>header>img {
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+
+
+/* layout with grid 1row 3columes */
+
+#grid {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 20% 58% 22%;
+}
+
+#leftcol {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: rgb(136, 173, 241);
+    padding: 0.8em;
+    padding-top: 1.2em;
+}
+
+#middletcol {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: red;
+}
+
+#rightcol {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: rgb(177, 130, 240);
+    padding-top: 1.2em;
+}
+
+
+/* footer layout define */
+
+footer {
+    width: 100%;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    background-color: rgb(52, 78, 125);
+    box-sizing: border-box;
+}
+
+footer::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+footer>section li {
+    width: 24%;
+    display: block;
+    float: left;
+    text-align: center;
+}
+
+
+/* middle colume area padding */
+
+#middlecol>* {
+    padding: 1em;
+}
+
+
+/* right colume padding */
+
+#rightcol {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
+/*
+----------------------------------------------------- 
+ another effect apply                                            
+-----------------------------------------------------
+*/
+
+
+/* left colume */
+
+#leftcol img {
+    width: 100%;
+    height: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#leftcol ul {
+    list-style-type: none;
+}
+
+#leftcol a {
+    text-decoration-line: none;
+}
+
+#leftcol a:hover {
+    text-decoration-line: underline;
+    font-size: 140%;
+    color: white;
+}
+
+
+/* middle colume */
+
+#middlecol h2 {
+    padding-bottom: 10px;
+}
+
+
+/* floating blake image */
+
+#blake {
+    float: left;
+    width: 16%;
+    margin-right: 1em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    border-style: outset;
+}
+
+
+/* cleared first story second paragraph */
+
+#middlecol p:nth-child(2) {
+    clear: left;
+}
+
+
+/* right colume */
+
+#rightcol h3 {
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+
+#rightcol ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+#rightcol a {
+    text-decoration-line: none;
+}
+
+#rightcol a:hover {
+    text-decoration-line: underline;
+    font-size: 105%;
+    color: white;
+}
+
+
+/* footer */
+
+footer>section li {
+    font-weight: bold;
+    color: Yellow;
+}
+
+
+/*
+----------------------------------------------------- 
+ relative and absolute position apply                                            
+-----------------------------------------------------
+*/
+
+
+/* relative */
+
+#blake:hover {
+    position: relative;
+    top: 10px;
+    left: 50px;
+    width: 50%;
+}
+
+
+/* absolute */
+
+#pcg_story2:hover {
+    position: absolute;
+    top: 240px;
+    width: 45%;
+    background-color: rgb(94, 255, 0);
+}
+
+
+/*
+----------------------------------------------------- 
+ font apply                                            
+-----------------------------------------------------
+*/
+
+#middlecol h2 {
+    font-family: 'Fascinate Inline', cursive;
+    font-size: 28px;
+    color: lightslategray;
+}
+
+#leftcol a {
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+}
+
+#middlecol p {
+    font-family: 'Big Shoulders Text', cursive;
+    font-size: 14px;
+    padding-bottom: 0.6em;
+}
+
+#rightcol h3 {
+    font-family: 'Satisfy', cursive;
+    font-size: 24px;
+    color: rgb(248, 204, 242);
+}
+
+#rightcol a {
+    font-family: 'Kanit', sans-serif;
+    font-size: 14px;
+}

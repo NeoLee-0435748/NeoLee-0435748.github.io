@@ -30,20 +30,20 @@ function decToHex(decNum) {
     Output:        none
 
 */
-function setTableBackground() {
-  let eleTds = document.getElementsByTagName("td");
+function setInputBackground() {
+  let eleInputs = document.getElementsByTagName("input");
   let bgcolorValue = "";
   let redRandom = 0;
   let greenRandom = 0;
   let blueRandom = 0;
 
-  for (let i = 0; i < eleTds.length; i++) {
+  for (let i = 0; i < eleInputs.length; i++) {
     redRandom = Math.floor(Math.random() * (MAX_NUM - 1)) + MIN_NUM;
     greenRandom = Math.floor(Math.random() * (MAX_NUM - 1)) + MIN_NUM;
     blueRandom = Math.floor(Math.random() * (MAX_NUM - 1)) + MIN_NUM;
 
     bgcolorValue = "#" + decToHex(redRandom) + decToHex(greenRandom) + decToHex(blueRandom);
-    eleTds[i].bgColor = bgcolorValue;
+    eleInputs[i].style.backgroundColor = bgcolorValue;
   }
 }
 
@@ -53,5 +53,5 @@ let eleBody = document.getElementsByTagName("body")[0];
 
 eleBody.onload = function() {
   // table background setting
-  setTableBackground();
+  setInputBackground();
 };

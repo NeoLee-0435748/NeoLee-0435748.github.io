@@ -1,0 +1,759 @@
+<!-- 
+    Title:          NSCC Application Form (Final Project)
+    Author:         Neo Lee (W0435748)
+    Date:           Nov 7, 2019
+    Description:    Create NSCC application form and related with server
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NSCC Application</title>
+    <!-- Link Style Sheets -->
+    <link rel="stylesheet" href="./main_style.css" />
+
+    <script src="http://gravityscript.googlecode.com/svn/trunk/gravityscript.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Nova Scotia Community College Program Application</h1>
+    </header>
+    <div id="main_form">
+        <form action="" method="POST">
+            <table id="main_table">
+                <!-- define header row 20 column for colspan -->
+                <!-- colspan = 1 presents 5% width -->
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <!-- first page -->
+                <!-- Personal Information -->
+                <!-- physical first row -->
+                <tr>
+                    <td colspan=5>
+                        <h3>Personal Information</h3>
+                    </td>
+                    <td colspan=5>
+                        <input type="text" name="fname" maxlength="50" size="25" required />
+                    </td>
+                    <td colspan=5>
+                        <input type="text" name="mname" maxlength="50" size="25" />
+                    </td>
+                    <td colspan=5>
+                        <input type="text" name="lname" maxlength="50" size="25" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=5>
+                        Please Print
+                    </td>
+                    <td colspan=15>
+                        Full Name (first, middle, last)
+                    </td>
+                </tr>
+                <!-- physical second row -->
+                <tr>
+                    <td colspan=8>
+                        <input type="text" name="pfname" maxlength="50" size="45" />
+                    </td>
+                    <td colspan=4>
+                        <input type="text" name="plname" maxlength="50" size="20" />
+                    </td>
+                    <td colspan=4>
+                        <input type="date" name="dob" min="1900-01-01" required />
+                    </td>
+                    <td colspan=1>
+                    </td>
+                    <td colspan=3>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=8>
+                        Preferred first name
+                    </td>
+                    <td colspan=4>
+                        Previous last name
+                    </td>
+                    <td colspan=3>
+                        Date of birth (mm/dd/yyyy)
+                    </td>
+                    <td colspan=1>
+                    </td>
+                    <td colspan=4>
+                        Gender
+                        <input type="radio" name="gender" value="M" />M&nbsp;&nbsp;
+                        <input type="radio" name="gender" value="F" />F
+                    </td>
+                </tr>
+                <!-- physical third row -->
+                <tr>
+                    <td colspan=3>
+                        <input type="text" name="apt_no" maxlength="4" size="13" />
+                    </td>
+                    <td colspan=17>
+                        <input type="text" name="perm_addr" maxlength="100" size="103" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3>
+                        Apartment number
+                    </td>
+                    <td colspan=17>
+                        Permanent mailing address (street address, rural route, or P.O. Box)
+                    </td>
+                </tr>
+                <!-- physical fourth row -->
+                <tr>
+                    <td colspan=10>
+                        <input type="text" name="city_town" maxlength="100" size="58" required />
+                    </td>
+                    <td colspan=3>
+                        <input type="text" name="province" maxlength="50" size="12" required />
+                    </td>
+                    <td colspan=4>
+                        <input type="text" name="country" maxlength="50" size="18" required />
+                    </td>
+                    <td colspan=3>
+                        <input type="text" name="postal_code" maxlength="6" size="12" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=10>
+                        City / Town
+                    </td>
+                    <td colspan=3>
+                        Province
+                    </td>
+                    <td colspan=4>
+                        Country
+                    </td>
+                    <td colspan=3>
+                        Postal code
+                    </td>
+                </tr>
+                <!-- physical fifth row -->
+                <tr>
+                    <td colspan=5>
+                        <input type="tel" name="home_phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" size="25" />
+                    </td>
+                    <td colspan=5>
+                        <input type="tel" name="work_phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" size="25" />
+                    </td>
+                    <td colspan=5>
+                        <input type="tel" name="cell_phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" size="25" required />
+                    </td>
+                    <td colspan=5>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=5>
+                        Home telephone
+                    </td>
+                    <td colspan=5>
+                        Work telephone
+                    </td>
+                    <td colspan=5>
+                        Cell phone
+                    </td>
+                    <td colspan=5>
+                    </td>
+                </tr>
+                <!-- physical sixth row -->
+                <tr>
+                    <td colspan=10>
+                        <input type="email" name="e_mail" maxlength="100" size="58" placeholder="emailid@example.com" required />
+                    </td>
+                    <td colspan=10>
+                        <input type="text" name="student_id" maxlength="8" size="57" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=10>
+                        Email address (We will be corresponding with you via email.
+                    </td>
+                    <td colspan=10>
+                        Student ID number
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=10>
+                        Please ensure this address is secure and accessible.)
+                    </td>
+                    <td colspan=10>
+                        (if you've previously attended NSCC)
+                    </td>
+                </tr>
+                <!-- space line -->
+
+                <tr>
+                    <td colspan=20>
+                        &nbsp;
+                    </td>
+                </tr>
+                <!-- English Language Proficiency -->
+                <!-- Citizenship Status -->
+                <!-- Program Choices -->
+                <!-- Physical seventh row -->
+                <tr>
+                    <td colspan=12>
+                        <h3>English Language Proficiency</h3>
+                    </td>
+                    <td colspan=1>
+                        &nbsp;&nbsp;&nbsp;|
+                        <br /> &nbsp;&nbsp;&nbsp;|
+                        <br /> &nbsp;&nbsp;&nbsp;|
+                    </td>
+                    <td colspan=7>
+                        <h3>Citizenship Status</h3>
+                    </td>
+                </tr>
+                <!-- Physical eighth row -->
+                <tr>
+                    <td colspan=5>
+                        Is English your first language?
+                        <br />
+                        <input type="radio" name="eng_fst_lang" value="Y" />Yes
+                        <input type="radio" name="eng_fst_lang" value="N" />No, my first language is:
+                        <br />
+                        <br />
+                    </td>
+                    <td colspan=7>
+                        <input type="text" name="proof_eng" max_langth="100" size="38" disabled />
+                        <br /> (if no, proof of English language proficiency is required.)
+                    </td>
+
+                    <td rowspan=2 colspan=1>
+                        &nbsp;&nbsp;&nbsp;|
+                        <br /> &nbsp;&nbsp;&nbsp;|
+                        <br /> &nbsp;&nbsp;&nbsp;|
+                        <br /> &nbsp;&nbsp;&nbsp;|
+                        <br /> &nbsp;&nbsp;&nbsp;|
+                        <br /> &nbsp;&nbsp;&nbsp;|
+                        <br /> &nbsp;&nbsp;&nbsp;|
+                        <br /> &nbsp;&nbsp;&nbsp;|
+                        <br /> &nbsp;&nbsp;&nbsp;|
+                        <br /> &nbsp;&nbsp;&nbsp;|
+                        <br /> &nbsp;&nbsp;&nbsp;|
+                    </td>
+                    <td rowspan=2 colspan=7>
+                        <input type="radio" name="citizenship" value="1" />Canadian Citizen
+                        <br /><br />
+                        <input type="radio" name="citizenship" value="2" />Permanent Resident (Copy of Permanent
+                        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resident card required)
+                        <br /><br />
+                        <input type="radio" name="citizenship" value="3" />Refugee with protected person Status
+                        <br /><br />
+                        <input type="radio" name="citizenship" value="4" />Other (Please specify below)
+                        <br />
+                        <input type="text" name="other_citizenship" max_length="50" size="37" disabled />
+                        <br /> Country of Citizenship (if not Canadian)
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=4>
+                        <h3>Program Choices</h3>
+                    </td>
+                    <td colspan=8>
+                        You can apply for one or two program/campus combinations. Changes or additions to our choices require the submission of a new application and fee. Your application will be considered for the next intake.
+                    </td>
+                </tr>
+                <!-- Physical nineth row -->
+                <tr>
+                    <td colspan=11>
+                        <input type="text" name="pref_program" max_length="100" size="65" required />
+                    </td>
+                    <td colspan=9>
+                        <input type="text" name="pref_location" max_length="100" size="50" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=11>
+                        Preferred program choice
+                    </td>
+                    <td colspan=9>
+                        Location
+                    </td>
+                </tr>
+                <!-- Physical tenth row -->
+                <tr>
+                    <td colspan=11>
+                        <input type="text" name="scnd_program" max_length="100" size="65" />
+                    </td>
+                    <td colspan=9>
+                        <input type="text" name="scnd_location" max_length="100" size="50" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=11>
+                        Second program choice
+                    </td>
+                    <td colspan=9>
+                        Location
+                    </td>
+                </tr>
+                <!-- space line -->
+                <tr>
+                    <td colspan=20>
+                        &nbsp;
+                    </td>
+                </tr>
+                <!-- Application Fee -->
+                <!-- physical eleventh row -->
+                <tr>
+                    <td colspan=4>
+                        <h3>Application Fee</h3>
+                    </td>
+                    <td colspan=13>
+                        The non-refundable $25 application fee($75 international, $0 ALP) must be received in order for your application to be processed. Please do not send cash.
+                    </td>
+                    <td colspan=3>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=20>
+                        <input type="radio" name="app_fee" value="1" />Visa
+                        <input type="radio" name="app_fee" value="2" />Mastercard
+                        <input type="radio" name="app_fee" value="3" />Discover
+                        <input type="radio" name="app_fee" value="4" />American Express
+                        <input type="radio" name="app_fee" value="5" />Cheque/Money Order (Payable to NSCC. No post-dated cheques.)
+                    </td>
+                </tr>
+                <!-- physical twelveth row -->
+                <tr>
+                    <td colspan=8>
+                        <input type="text" name="cc_no" maxlength="16" size="44" disabled />
+                    </td>
+                    <td colspan=2>
+                        <input type="text" name="cc_exp_dt" maxlength="5" size="5" placeholder="mm/yy" disabled />
+                    </td>
+                    <td colspan=5>
+                        <input type="text" name="cc_hold_name" maxlength="50" size="24" disabled />
+                    </td>
+                    <td colspan=5>
+                        <input type="text" name="cc_hold_sign" maxlength="50" size="24" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=8>
+                        Credit card number
+                    </td>
+                    <td colspan=2>
+                        Exp. Date(mm/yy)
+                    </td>
+                    <td colspan=5>
+                        Name of Cardholder
+                        <br />(as it appears on the card)
+                    </td>
+                    <td colspan=5>
+                        Cardholder's signature
+                    </td>
+                </tr>
+                <!-- space line -->
+                <tr>
+                    <td colspan=20>
+                        <br />
+                        <br />
+                    </td>
+                </tr>
+                <!-- Physical thirtieth row -->
+                <tr>
+                    <td colspan=20>
+                        For office use only
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=6>
+                        <input type="text" name="staff_id" maxlength="10" size="32" disabled />
+                    </td>
+                    <td rowspan=4 colspan=4>
+                        <textarea rows="5" disabled></textarea>
+                    </td>
+                    <td rowspan=4 colspan=10>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=6>
+                        ID
+                    </td>
+                </tr>
+                <!-- Physical fourtieth row -->
+                <tr>
+                    <td colspan=6>
+                        <input type="text" name="receipt_no" maxlength="10" size="32" disabled />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=6>
+                        Receipt number
+                    </td>
+                </tr>
+                <!-- space line -->
+                <tr>
+                    <td colspan=20>
+                        <hr>
+                    </td>
+                </tr>
+                <!-- Educational History -->
+                <!-- second page ============================================================================================== -->
+                <!-- physical first row -->
+                <tr>
+                    <td colspan=5>
+                        <h3>Educational History</h3>
+                    </td>
+                    <td colspan=11>
+                        Please include all educational history, even if the program was not completed. Applications without complete documentation cannot be processed regardless of the date of submission of the application. Official transcripts are required.
+                    </td>
+                    <td colspan=4>
+                    </td>
+                </tr>
+                <!-- space line -->
+                <tr>
+                    <td colspan=20>
+                        &nbsp;
+                    </td>
+                </tr>
+                <!-- physical second row -->
+                <tr>
+                    <td colspan=20>
+                        High school or GED
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=13>
+                        <input type="text" name="sch_name" maxlength="100" size="78" required />
+                    </td>
+                    <td colspan=4>
+                        <input type="text" name="grade_comp" maxlength="10" size="18" required />
+                    </td>
+                    <td colspan=3>
+                        <input type="date" name="grade_date" style="width:123px" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=13>
+                        Name of school
+                    </td>
+                    <td colspan=4>
+                        Grade completed
+                    </td>
+                    <td colspan=3>
+                        Date
+                    </td>
+                </tr>
+                <!-- space line -->
+                <tr>
+                    <td colspan=20>
+                        &nbsp;
+                    </td>
+                </tr>
+                <!-- physical third row -->
+                <tr>
+                    <td colspan=20>
+                        Previous community college, university and/or other education:
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=13>
+                        <input type="text" name="fst_ins_name" maxlength="100" size="78" />
+                    </td>
+                    <td colspan=4>
+                        <select name="fst_ins_grade" style="width:150px">
+                            <option value="1">Degree</option>
+                            <option value="2">Diploma</option>
+                        </select>
+                    </td>
+                    <td colspan=3>
+                        <input type="text" name="fst_ins_year" min="1990" max="3000" value="2019" size="12" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=13>
+                        Name of Institution
+                    </td>
+                    <td colspan=4>
+                        Degree/Diploma
+                    </td>
+                    <td colspan=3>
+                        Year
+                    </td>
+                </tr>
+                <!-- physical fourth row -->
+                <tr>
+                    <td colspan=13>
+                        <input type="text" name="snd_ins_name" maxlength="100" size="78" />
+                    </td>
+                    <td colspan=4>
+                        <select name="snd_ins_grade" style="width:150px">
+                            <option value="1">Degree</option>
+                            <option value="2">Diploma</option>
+                        </select>
+                    </td>
+                    <td colspan=3>
+                        <input type="text" name="snd_ins_year" min="1990" max="3000" value="2019" size="12" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=13>
+                        Name of Institution
+                    </td>
+                    <td colspan=4>
+                        Degree/Diploma
+                    </td>
+                    <td colspan=3>
+                        Year
+                    </td>
+                </tr>
+                <!-- space line -->
+                <tr>
+                    <td colspan=20>
+                        &nbsp;
+                    </td>
+                </tr>
+                <!-- physical fifth row -->
+                <tr>
+                    <td colspan=5>
+                        <h3>Health &amp; Human
+                            <br /> Services Applicants
+                        </h3>
+                    </td>
+                    <td colspan=5>
+                        Have you been convicted of a criminal offence for which you have not received a pardon?
+                        <br />
+                        <input type="checkbox" name="hhsa_qus1" value="Y" />Yes
+                        <input type="checkbox" name="hhsa_qus1" value="N" />No
+                    </td>
+                    <td colspan=5>
+                        Have you been convicted of an offence or investigated for an activity resulting in your name being placed on the Child Abuse Registry?
+                        <br />
+                        <input type="checkbox" name="hhsa_qus2" value="Y" />Yes
+                        <input type="checkbox" name="hhsa_qus2" value="N" />No
+                    </td>
+                    <td colspan=5>
+                        Have you ever received any disciplinary actions (including any revocation of your licence to practise) as a member of another health and human service organization?
+                        <br />
+                        <input type="checkbox" name="hhsa_qus3" value="Y" />Yes
+                        <input type="checkbox" name="hhsa_qus3" value="N" />No
+                    </td>
+                </tr>
+                <!-- space line -->
+                <tr>
+                    <td colspan=20>
+                        &nbsp;
+                    </td>
+                </tr>
+                <!-- physical sixth row -->
+                <tr>
+                    <td colspan=5>
+                        <h3>Self-identification
+                            <br />Questionnaire
+                        </h3>
+                        (Optional)
+                    </td>
+                    <td colspan=13>
+                        NSCC is committed to fostering a diverse college culture and community. Completion of all or part of this section is voluntary. The information collected may be used by staff and faculty to advise you of services. It will also be used to assist in assessing
+                        and improving student services.
+                    </td>
+                    <td colspan=2>
+                    </td>
+                </tr>
+                <!-- space line -->
+                <tr>
+                    <td colspan=20>
+                        &nbsp;
+                    </td>
+                </tr>
+                <!-- physical seventh row -->
+                <tr>
+                    <td colspan=5>
+                        Do you self-identify as an Aborginal person?
+                        <br />
+                        <input type="checkbox" name="siq_qus1" value="Y" />Yes
+                        <input type="checkbox" name="siq_qus1" value="N" />No
+                    </td>
+                    <td colspan=5>
+                        Do you self-identify as a member of the African Canadian community?
+                        <br />
+                        <input type="checkbox" name="siq_qus2" value="Y" />Yes
+                        <input type="checkbox" name="siq_qus2" value="N" />No
+                    </td>
+                    <td colspan=5>
+                        Do you self-identify as a person with a disability?
+                        <br />
+                        <input type="checkbox" name="siq_qus3" value="Y" />Yes
+                        <input type="checkbox" name="siq_qus3" value="N" />No
+                    </td>
+                    <td colspan=5>
+                        If you require accommodation, please provide documentation of disability:
+                        <br />
+                        <input type="checkbox" name="siq_qus4" value="1" />Enclosed
+                        <br />
+                        <input type="checkbox" name="siq_qus4" value="2" />I will forward it
+                        <br />
+                        <input type="checkbox" name="siq_qus4" value="3" />On file with NSCC Admissions
+                    </td>
+                </tr>
+                <!-- physical eighth to tenth row -->
+                <tr>
+                    <td colspan=15>
+                        <h3>Additional Information</h3>
+                    </td>
+                    <td id="further_info" rowspan=12 colspan=5>
+                        <h3>Further Information</h3>
+                        <br />Forward your completed application form, fee, official transcripts, and any other admission documents to the following address. All submitted documents become the property of NSCC and will not be returned. Your application
+                        must be complete before it can be processed and a decision made.
+                        <br /><br />NSCC Admissions
+                        <br />P.O. Box 220
+                        <br />Halifax, NS B3J 2M4
+                        <br /><br />Questions? Email admissions@nscc.ca or contact us by telephone or fax:
+                        <br /><br />Tel: 902-491-4911
+                        <br />Toll free: 1-866-679-6722
+                        <br /><br />Fax: 902-491-3514
+                        <br />Toll free fax: 1-866-329-6722
+                        <br />
+                        <h4>nscc.ca</h4>
+                        <br /><br />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=15>
+                        <input type="text" name="add_info1" maxlength="100" size="90" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=15>
+                        <input type="text" name="add_info2" maxlength="100" size="90" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=15>
+                        <input type="text" name="add_info2" maxlength="100" size="90" />
+                    </td>
+                </tr>
+
+                <!-- physical eleventh row -->
+                <tr>
+                    <td colspan=15>
+                        <h3>Certification</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=15>
+                        I understand that it is my responsibility to arrange for the submission of the transcripts and that the application without complete documentation cannot be considered regardless of submission date. I certify that the foregoing information is accurate
+                        and correct to the best of my knowledge. I understand that the College will collect, use, and disclose my personal information in a confidential manner that is consistent with the operation of a post-secondary institution. My consent
+                        is conditional upon Nova Scotia Community College complying with their legal duties and obligations to manage the collection, use, and disclosure of personal information.
+                    </td>
+                </tr>
+                <!-- physical twelveth row -->
+                <tr>
+                    <td colspan=11>
+                        <input type="text" name="appl_sign" size="64" placeholder="X" disabled />
+                    </td>
+                    <td colspan=4>
+                        <input type="date" name="appl_date" style="width: 150px" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=11>
+                        Applicant Signature
+                    </td>
+                    <td colspan=4>
+                        Date (mm/dd/yyyy)
+                    </td>
+                </tr>
+                <!-- space line -->
+                <tr>
+                    <td colspan=15>
+                        &nbsp;
+                    </td>
+                </tr>
+                <!-- physical thirteenth row -->
+                <tr>
+                    <td colspan=5>
+                        <h3>Permission to
+                            <br />Release Personal
+                            <br />Information
+                        </h3>
+                        (Optional)
+                    </td>
+                    <td colspan=10>
+                        Your written permission is required before any personal and financial information, including admission decisions, can be released to a third party. Access to your personal information will only be granted until your first day of classes.
+                    </td>
+                </tr>
+                <!-- physical fourteenth row -->
+                <tr>
+                    <td rowspan=4 colspan=5>
+                        <input type="checkbox" name="prpi_qus1" /> I hereby give consent to the release of the information concerning my application for admission during the evaluation period to:
+                    </td>
+                    <td colspan=15>
+                        <input type="text" name="prpi_name" maxlength="100" size="57" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=15>
+                        Name
+                    </td>
+                </tr>
+                <!-- physical fifteenth row -->
+                <tr>
+                    <td colspan=15>
+                        <input type="text" name="prpi_rel" maxlength="100" size="57" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=15>
+                        Relationship (e.g. Parent, guardian, guidance counsellor, spouse)
+                    </td>
+                </tr>
+                <!-- space line -->
+                <tr>
+                    <td colspan=20>
+                        &nbsp;
+                    </td>
+                </tr>
+                <!-- physical sixteenth row -->
+                <tr>
+                    <td colspan=17>
+                    </td>
+                    <td colspan=3>
+                        <input type="submit" value="Apply" style="width: 125px" />
+                    </td>
+                </tr>
+                <!-- empty row for space -->
+                <tr class="empty_row">
+                    <td class="empty_row" colspan="20">
+                        <br />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!-- include script file -->
+    <script src="validCheck.js"></script>
+</body>
+
+</html>

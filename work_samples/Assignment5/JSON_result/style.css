@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+/*
+    Title:          JSON file handling (Final Assignment)
+    Author:         Neo Lee (W0435748)
+    Date:           Nov 26, 2019
+    Description:    Set table style and etc.
+    
+*/
+
+
+/* set table property */
+
+table,
+td,
+th {
+    border: 1px solid black;
+}

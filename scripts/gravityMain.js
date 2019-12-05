@@ -75,10 +75,10 @@ function init() {
   // init box2d
 
   worldAABB = new b2AABB();
-  // worldAABB.minVertex.Set(-200, -200);
-  // worldAABB.maxVertex.Set(window.innerWidth + 200, window.innerHeight + 200);
-  worldAABB.minVertex.Set(-500, -500);
-  worldAABB.maxVertex.Set(window.innerWidth + 500, window.innerHeight + 500);
+  worldAABB.minVertex.Set(-200, -200);
+  worldAABB.maxVertex.Set(window.innerWidth + 200, window.innerHeight + 200);
+  // worldAABB.minVertex.Set(-500, -500);
+  // worldAABB.maxVertex.Set(window.innerWidth + 500, window.innerHeight + 500);
 
   world = new b2World(worldAABB, new b2Vec2(0, 0), true);
 

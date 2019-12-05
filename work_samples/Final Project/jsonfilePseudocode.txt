@@ -1,0 +1,92 @@
+/* program outline --------------------------------------------------------
+  Title: COUNTRIES OF THE WORLD
+  Specifications:
+  Create a dynamic HTML5 website that displays information about any country the user selects from a list.
+  For any country selected, the application will display the following data:
+    •	Name of the country
+    •	An image of the country’s flag
+    •	The population of the country
+    •	The country’s total area, shown in sq. miles (by default) or sq. kilometres, 
+        according to user preference
+    •	The country’s population density per square mile (by default) or square KM, 
+        according to user preference
+    •	The country’s percentage of the total world population
+  The country data being displayed will change automatically whenever a new country is selected from the list.
+  On the display for each country a button will be presented to launch a second web page, 
+  which will load the Wikipedia entry for the selected country. 
+---------------------------------------------------------------------------- */
+
+/* error handling case */
+1. when select unit in area in
+2. when check radio in population density
+3. when click wiki link button
+
+/* Read JSON file and store */
+1. Function start
+2. Read JSON file using XMLHttpRequest function
+  - onreadystatechange event (async)
+  - open
+  - send
+3. JSON file data store to the global variable
+  - infoCountries
+4. call initCountrySelector
+5. Function end
+
+/* function initCountrySelector */
+1. Function start
+2. For loop start until end of infoCountries data
+ 2-1. add option html text to txtHtml
+3. Set innerHTML to sel_country select element with txtHtml
+4. Function end
+
+/* Get a selected country's information when a user select a country */
+1. Function start
+2. Get a selected country info from the country select element
+3. Call DisplayCountryData with country info array
+4. Call DisplayPopulationData with country info array
+3. Function end
+
+/* function DisplayCountryData */
+1. Function start
+2. Get a flag image element (getElementID)
+3. Make a path for flag
+  - ./flag/country's name
+   : if country's name has a space, it needs change to '_'
+4. Change the flag image
+5. Change the Country's name element
+6. Function end
+
+/* function DisplayPopulationData */
+1. Function start
+2. Display country's population
+3. If area in is selected 'Sq. Miles' and display square miles data
+4. If not call CalculateAreaInKM and display square KM data
+5. Call CalculatePopulationDensity and display it
+6. Call CalculateTotalWorldPopulation and store return value to totalPopulation
+7. Divide country's population by totalPopulation and display it
+8. Function end
+
+/* Call CalculateTotalWorldPopulation */
+1. Function start
+2. For loop start until end of JSON data
+ 2-1. Add each country's population
+   - totalPopulation
+3. return totalPopulation data (float)
+4. Function end
+
+/* function CalculateAreaInKM */
+1. Function start
+2. Declare constant variable for 2.58999 (change ratio)
+3. Calculate input square miles data * constant variable
+4. return square KM data (float)
+5. Function end
+
+/* CalculatePopulationDensity */
+1. Function start
+2. Declare constant variable for 2.58999 (change ratio)
+3. If PopulationDensity is selected 'Per Square Mile'
+  - Divide country's population by square miles data
+4. If not
+  - Divide country's population by (square miles data * constant variable)
+5. return populationDensity data (float)
+6. Function end

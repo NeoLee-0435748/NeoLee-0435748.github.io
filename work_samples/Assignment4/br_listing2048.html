@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+    New Perspectives on HTML5 and CSS3, 7th Edition
+    Tutorial 4
+    Case Problem 4
+    
+    Browyer Realty Listing 2048
+    Author: Neo Lee (w0435748)
+    Date:   Nov 2, 2019
+
+    Filename: br_listing2048.html
+   -->
+    <title>Browyer Realty</title>
+    <!-- Style Sheets load -->
+    <link href="br_reset.css" rel="stylesheet" />
+    <link href="br_styles.css" rel="stylesheet" />
+    <!-- Import google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Monoton|Press+Start+2P|Wallpoet&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <img id="br-logo" src="br_logo.png" />
+      <!-- main menu -->
+      <nav class="w3-panel w3-win8-lime">
+        <ul>
+          <li><a href="./br_listing2048.html">Residential</a></li>
+          <li><a href="./br_listing2048.html">Business</a></li>
+          <li><a href="./br_listing2048.html">Properties</a></li>
+          <li><a href="./br_listing2048.html">Rentals</a></li>
+          <li><a href="./br_listing2048.html">Appraisals</a></li>
+        </ul>
+      </nav>
+    </header>
+    <article id="grid">
+      <article id="left-col">
+        <!-- views -->
+        <div class="title-h3">
+          <h3>Views</h3>
+        </div>
+        <!-- big image -->
+        <article id="left-row-1">
+          <img id="big-img" src="br_photo1.png" />
+        </article>
+        <!-- view images -->
+        <article id="left-row-2">
+          <a href="#"><img id="photo1" src="br_photo1.png"/></a>
+          <a href="#"><img id="photo2" src="br_photo2.png"/></a>
+          <a href="#"><img id="photo3" src="br_photo3.png"/></a>
+          <a href="#"><img id="photo4" src="br_photo4.png"/></a>
+          <a href="#"><img id="photo5" src="br_photo5.png"/></a>
+          <a href="#"><img id="photo6" src="br_photo6.png"/></a>
+          <a href="#"><img id="photo7" src="br_photo7.png"/></a>
+          <a href="#"><img id="photo8" src="br_photo8.png"/></a>
+          <a href="#"><img id="photo9" src="br_photo9.png"/></a>
+        </article>
+        <br /><br />
+        <!-- view detail -->
+        <div class="title-h3">
+          <h3>Listing Description</h3>
+        </div>
+        <article id="left-row-4">
+          <article id="left-col-41">
+            <br />
+            <p class="sub-title">Address:</p>
+            <p>Listing 2048</p>
+            <p>414 Mandel Road</p>
+            <p>Owatonna, MN 55060</p>
+          </article>
+          <article id="left-col-42">
+            <br />
+            <p class="sub-title">List Price:</p>
+            <p>$412,800</p>
+            <br />
+            <p class="sub-title">Square Feet:</p>
+            <p>3,300</p>
+            <br />
+            <p class="sub-title">Bedrooms:</p>
+            <p>4</p>
+            <br />
+            <p class="sub-title">Baths:</p>
+            <p>2-1/2</p>
+          </article>
+        </article>
+        <br /><br />
+        <article id="left-row-5">
+          <div class="title-h3">
+            <h3>Listing 20481</h3>
+          </div>
+          <blockquote>
+            <br />
+            <p>
+              Paradise found! This custom-built brand new home sits proudly on a 6.8-acre high wooded site overlooking a 300-acre nature
+              conservancy. The setting is exceptional, and the home is every bit as exciting! A bright, open layout is enhanced by vaulted
+              ceilings, hardwood and tumbled, ceramic flooring, custom maple cabinetry, upgraded fixtures, numerous windows, and incredible
+              views.
+            </p>
+            <br />
+            <p>
+              There is much more. The property includes a 40x54 storage building - perfect for a large boat and machinery. An exposed
+              walkout on lower level leads down to a beautiful wooded area.
+            </p>
+            <br />
+            <p>
+              An extra bathroom, bedroom, and family room can be added to the unfinished basement for more living space.
+            </p>
+          </blockquote>
+        </article>
+      </article>
+      <!-- Links(2) -->
+      <article id="right-col">
+        <div id="link">
+          <h1>[Links]</h1>
+        </div>
+        <nav class="pulldown-menu">
+          <ul class="main-menu">
+            <li>
+              <a href="#" class="submenu-title">More Details &#9654;</a>
+              <ul class="sub-menu">
+                <li><a href="#more-details1">Detail 1</a></li>
+                <li><a href="#more-details2">Detail 2</a></li>
+                <li><a href="#more-details3">Detail 3</a></li>
+                <li><a href="#more-details4">Detail 4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="submenu-title">Map &#9654;</a>
+              <ul class="sub-menu">
+                <li><a href="#map-halifax">Halifax Downtown</a></li>
+                <li><a href="#map-bedford">Bedford</a></li>
+                <li><a href="#map-sackville">Lower Sackville</a></li>
+              </ul>
+            </li>
+            <li><a href="#request">Request a Showing</a></li>
+            <li>
+              <a href="#" class="submenu-title">Other Listings &#9654;</a>
+              <ul class="sub-menu">
+                <li><a href="#other1">Libraries</a></li>
+                <li><a href="#other2">Shopping malls</a></li>
+                <li><a href="#other3">Rent Cars</a></li>
+                <li><a href="#other4">Nova Access</a></li>
+                <li><a href="#other5">Restaurants</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </article>
+    </article>
+
+    <script src="//gravityscript.github.io/grav.js"></script>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<!-- 
+    Title:          Neo Calulator
+    Author:         Neo Lee (W0435748)
+    Date:           Nov 19, 2019
+    Description:    My first simple calculator
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Neo's Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      h2 {
+        margin-left: 20px;
+        color: magenta;
+      }
+      /* define table layout */
+
+      table#neo_calc {
+        margin-left: 20px;
+        table-layout: fixed;
+        width: 300px;
+        border-collapse: collapse;
+        /* border: 1px lightgray solid; */
+      }
+      /* define calclator display */
+
+      #cal_display {
+        background-color: black;
+        color: #53f442;
+        font-face: courier;
+        width: 280px;
+        height: 35px;
+        margin-bottom: 10px;
+      }
+      /* adjust button size */
+
+      #num0 {
+        width: 110px;
+      }
+
+      #answer {
+        height: 160px;
+      }
+
+      #num7,
+      #num8,
+      #num9,
+      #num4,
+      #num5,
+      #num6,
+      #num1,
+      #num2,
+      #num3,
+      #plus,
+      #minus,
+      #multi,
+      #divide,
+      #clear {
+        width: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Neo's Calculator</h2>
+    <table id="neo_calc">
+      <tr>
+        <td colspan="5">
+          <div id="cal_display"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="btn btn-primary" id="num7">7</div>
+        </td>
+        <td>
+          <div class="btn btn-primary" id="num8">8</div>
+        </td>
+        <td>
+          <div class="btn btn-primary" id="num9">9</div>
+        </td>
+        <td>
+          <div class="btn btn-primary" id="plus">+</div>
+        </td>
+        <td rowspan="4">
+          <div class="btn btn-primary" id="answer">=</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="btn btn-primary" id="num4">4</div>
+        </td>
+        <td>
+          <div class="btn btn-primary" id="num5">5</div>
+        </td>
+        <td>
+          <div class="btn btn-primary" id="num6">6</div>
+        </td>
+        <td>
+          <div class="btn btn-primary" id="minus">-</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="btn btn-primary" id="num1">1</div>
+        </td>
+        <td>
+          <div class="btn btn-primary" id="num2">2</div>
+        </td>
+        <td>
+          <div class="btn btn-primary" id="num3">3</div>
+        </td>
+        <td>
+          <div class="btn btn-primary" id="multi">*</div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div class="btn btn-primary" id="num0">0</div>
+        </td>
+        <td>
+          <div class="btn btn-primary" id="clear">C</div>
+        </td>
+        <td>
+          <div class="btn btn-primary" id="divide">/</div>
+        </td>
+      </tr>
+    </table>
+
+    <!-- script for calculate -->
+    <script src="neoCalc.js"></script>
+  </body>
+</html>

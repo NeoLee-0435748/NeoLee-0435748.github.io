@@ -6,7 +6,12 @@
 
  */
 
-a {
+/* for work sample a tag */
+.work_sample {
   font-family: "Montserrat Subrayada", sans-serif;
   font-size: 25px;
+}
+
+.shadow {
+  margin-bottom: 1rem !important;
 }

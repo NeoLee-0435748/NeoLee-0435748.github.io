@@ -36,6 +36,7 @@
 /* Change background color of buttons on hover */
 .tab button:hover {
   background-color: #ddd;
+  font-weight: bold;
 }
 
 /* Create an active/current "tab button" class */
@@ -53,7 +54,69 @@
   height: 500px;
 }
 
-/* style for ul, li */
-li {
-  list-style-type: none;
+/* style button bottom margin */
+.shadow {
+  margin-bottom: 1rem !important;
+}
+
+/* style the inner div in a tab content */
+.div_inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: "Montserrat Subrayada", sans-serif;
+  font-size: 18px;
+  height: 480px;
+}
+
+/* style button for a mouse hovering*/
+#div_ca_1:hover,
+#div_ca_2:hover,
+#div_ca_3:hover,
+#div_ca_4:hover {
+  color: darkgoldenrod;
+  font-weight: bold;
+  -webkit-animation: mymove 2.5s infinite; /* Chrome, Safari, Opera */
+  animation: mymove 2.5s infinite;
+}
+
+#div_fi_1:hover,
+#div_fi_2:hover,
+#div_fi_3:hover,
+#div_fi_4:hover {
+  color: darkgreen;
+  font-weight: bold;
+  -webkit-animation: mymove 2.5s infinite; /* Chrome, Safari, Opera */
+  animation: mymove 2.5s infinite;
+}
+
+#div_fa_1:hover,
+#div_fa_2:hover,
+#div_fa_3:hover {
+  color: darkturquoise;
+  font-weight: bold;
+  -webkit-animation: mymove 2.5s infinite; /* Chrome, Safari, Opera */
+  animation: mymove 2.5s infinite;
+}
+
+#div_pl_1:hover,
+#div_pl_2:hover {
+  color: darkblue;
+  font-weight: bold;
+  -webkit-animation: mymove 2.5s infinite; /* Chrome, Safari, Opera */
+  animation: mymove 2.5s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+  50% {
+    text-shadow: 5px 10px 15px black;
+  }
+}
+
+/* Standard syntax */
+@keyframes mymove {
+  50% {
+    text-shadow: 5px 10px 15px black;
+  }
 }

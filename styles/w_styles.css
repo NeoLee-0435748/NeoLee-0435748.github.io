@@ -6,4 +6,37 @@
 
  */
 
-/* for work sample a tag */
+/* for work sample main div */
+.div_ws_main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 350px;
+}
+
+.div_ws_main img {
+  transition: width 2s, height 2s, transform 2s;
+}
+.div_ws_main img:hover {
+  width: 350px;
+  height: 300px;
+  transform: rotate(360deg);
+}
+
+/* for work sample sub div */
+.div_ws_sub {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+div[class^="div_ws_sub_"] {
+  width: 150px;
+  height: 125px;
+}
+
+.div_ws_sub_1 {
+  display: none;
+}

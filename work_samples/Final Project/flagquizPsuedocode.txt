@@ -1,0 +1,109 @@
+/* program outline --------------------------------------------------------
+  Title: Flag Quiz
+  The user will be allowed to launch another web page via a link or button on the main page, 
+  which will present a Flags quiz in the same tab as the original page. 
+  This quiz will randomly show a country’s flag, 
+  present a drop-downwith the correct country and three other random country names, shown in random order, 
+  and allow the user to submit their choice. 
+  The user will be immediately informed of their updated score after each guess via a score progress output on the page. 
+  The user will be taken through a quiz of 10 questions, 
+  and will have buttons to cancel(and close) or restart the quiz at any time.
+  
+  Once the last quiz question is answered, the user’s final quiz score will be calculated and displayed on screen. 
+  Theirscore will be evaluated to see if it is a new high score, 
+  through a comparison to values originally loaded from the high-scores.json file, 
+  but later updated and maintained in HTML5 local storage in the web browser. 
+  If the final score qualifies as a top-5 high score, 
+  the user will be prompted to enter their three-letter (e.g. MHC) username, 
+  which will be saved as a new high score in local storage. 
+  Only the five highest scores are saved, so a new entry will effectively bump the lowest off of the list. 
+  The score must be higher than one of the previous entries, 
+  so earlier scores “win” in case of a tie (ie. the first 10/10 will be the highest score forever). 
+  The username, score, and timestamp will be saved to local storage in the format indicated in the high_scores.json file. 
+  Do not forget to drop the lowest score if there is a new entry as we only store 5 highest scores. 
+  Regardless of whether there is a new entry or not, 
+  the highest scores will then be displayed to the user in a well formatted way, 
+  in the area of the web page near the section for guessing a country. 
+  The user will still have buttons at the bottom of the page to either cancel (ie. Close) the web page 
+  and return to the main page or restart the quiz.
+---------------------------------------------------------------------------- */
+/* global variables ---------------------------------------- */
+1. quiz_count = 0 - how many quizzes are solved
+2. correct_answer_count = 0 - how many answers are correct
+
+/* Common functions ---------------------------------------- */
+/* Read JSON file and store to localstorage */
+1. Function start
+2. Read JSON file using XMLHttpRequest function
+  2.1. onreadystatechange event (async)
+  2.2. open
+  2.3. send
+3. JSON file data store to the local storage
+  - flagQuizHighScores
+4. Function end
+
+/* Quiz process -------------------------------------------- */
+/* Init quiz */
+1. Function start
+2. Initialize global variables
+3. call Get Quiz info for first quiz
+4. Function end
+
+/* Get quiz info */
+1. Function start
+2. Generate random number for answer (1 to 4)
+3. Generate random number for four countries (1 to 201)
+  3.1. avoid same number
+  3.2. keep in array [[country name, answer y/n], ...]
+4. call Display Quiz
+5. Function end
+
+/* Display quiz */
+1. Function start
+2. Display flag image
+3. Display answer options
+4. Display correct answer result
+5. Function end
+
+/* Result check */
+1. Function start
+2. If correct_answer_count is greater than flagQuizHighScores's last score
+  2.1. ask user name (Max 3 letter)
+  2.2. loop for compare scores (3 to 0)
+    2.2.1. if correct_answer_count is greater than flagQuizHighScores
+      2.2.1.1. score_position = loop count
+  2.3. loop for change high score (3 to score_position + 1)
+    2.3.1. move score date at loop count to loop count + 1
+  2.4. add new score data at score_position (name, score, timestamp)
+  2.5. Display High Scores table
+3. Function end
+
+/* DOM event function ------------------------------------- */
+/* body onload event */
+1. Function start
+2. load JSON data from original_high_scores.json
+3. call Init quiz
+4. Function end
+
+/* Next button */
+1. Function start
+2. If answer is correct
+  - increase correct_answer_count
+3. Display current result
+  - correct_answer_count "out of" quiz_count
+4. If quiz_count is 10
+  - call Result check
+5. Else
+  - call Get quiz info
+6. Increase quiz_count
+7. Function end
+
+/* Restart button */
+1. Function start
+2. Call Init quiz
+3. Function end
+
+/* Quit button */
+1. Function start
+2. open main page (Country of the world)
+3. Function end

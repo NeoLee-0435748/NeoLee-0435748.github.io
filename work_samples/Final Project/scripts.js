@@ -295,3 +295,10 @@ eleBtnWiki.addEventListener("click", function() {
     window.open(baseURL + countryURL, "_blank");
   }
 });
+
+// btn_quiz button event
+let eleBtnQuiz = document.getElementById("btn_quiz");
+
+eleBtnQuiz.addEventListener("click", function() {
+  window.open("./flagquiz.html", "_self");
+});

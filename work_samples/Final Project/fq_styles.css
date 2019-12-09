@@ -1,0 +1,172 @@
+/*
+  Student Name:   Neo Lee(W0435748)
+  Date:           Dec 07, 2019  
+  Program Title:  Flag Quiz
+*/
+
+/*
+----------------------------------------------------- 
+ Reset Style Sheet                                          
+-----------------------------------------------------
+*/
+address,
+article,
+aside,
+blockquote,
+body,
+cite,
+div,
+dl,
+dt,
+dd,
+em,
+figcaption,
+figure,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+img,
+li,
+main,
+nav,
+ol,
+p,
+section,
+span,
+ul {
+  background: transparent;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/*
+----------------------------------------------------- 
+ layout define                                            
+-----------------------------------------------------
+*/
+
+/* define body part */
+body {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  min-width: 640px;
+  max-width: 960px;
+  background-color: rgb(212, 235, 243);
+}
+
+/* layout with grid 1row 3columes */
+.div_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-style: solid;
+  border-width: thin;
+  border-color: gray;
+  margin-top: 3%;
+  padding: 2%;
+}
+
+.div_left {
+  padding-top: 3%;
+  width: 450px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.div_left_11 {
+  width: 380px;
+}
+
+.div_left_12 {
+  width: 70px;
+  /* align-items: center; */
+}
+
+.div_space {
+  margin-top: 10%;
+}
+
+.div_flex_btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.div_right {
+  width: 450px;
+}
+
+/*
+----------------------------------------------------- 
+ font define
+-----------------------------------------------------
+*/
+
+/*
+----------------------------------------------------- 
+ each section styling
+-----------------------------------------------------
+*/
+
+/* left section ------------------------------------- */
+
+/* game title */
+.div_left_11 h1 {
+  margin-bottom: 2%;
+}
+
+/* flag image size */
+#img_country_flag {
+  width: 360px;
+  height: 240px;
+}
+
+/* next button */
+#btn_next {
+  margin-top: 280px;
+  height: 28%;
+}
+
+/* restart and quit button */
+#btn_restart,
+#btn_quit {
+  margin-right: 5%;
+}
+
+/* right section ----------------------------------- */
+.div_right {
+  padding-top: 3%;
+  padding-left: 10%;
+}
+
+/* table */
+.div_scores_table table {
+  border-collapse: collapse;
+  border-spacing: 5px;
+}
+
+.div_scores_table table,
+th,
+td {
+  border: 1px solid black;
+}
+
+.div_scores_table th,
+td {
+  padding: 7px;
+  background-color: none;
+}
+
+.div_scores_table h4 {
+  margin-bottom: 2%;
+}

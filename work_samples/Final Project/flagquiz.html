@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Flags Quiz</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- import external stylesheet -->
+    <link href="fq_styles.css" rel="stylesheet" />
+  </head>
+  <!-- 
+  Student Name:   Neo Lee(W0435748)
+  Date:           Dec 07, 2019  
+  Program Title:  Flag of the countries Quiz
+  -->
+  <body>
+    <div class="div_flex">
+      <!-- for Quiz -->
+      <div class="div_left">
+        <div class="div_left_11">
+          <h1>[ Flags Quiz ]</h1>
+          <img id="img_country_flag" />
+          <p>What country's flag is this?</p>
+          <input id="rdo_answer_1" type="radio" name="quiz_answer" />
+          <label for="rdo_answer_1" name="lbl_quiz_answer"></label><br />
+          <input id="rdo_answer_2" type="radio" name="quiz_answer" />
+          <label for="rdo_answer_2" name="lbl_quiz_answer"></label><br />
+          <input id="rdo_answer_3" type="radio" name="quiz_answer" />
+          <label for="rdo_answer_3" name="lbl_quiz_answer"></label><br />
+          <input id="rdo_answer_4" type="radio" name="quiz_answer" />
+          <label for="rdo_answer_4" name="lbl_quiz_answer"></label><br />
+          <div class="div_space">
+            <p id="p_curr_result"></p>
+          </div>
+          <div class="div_flex_btn">
+            <button type="button" class="btn btn-outline-danger" id="btn_restart">Restart</button>
+            <button type="button" class="btn btn-outline-success" id="btn_quit">Quit</button>
+          </div>
+        </div>
+        <div class="div_left_12">
+          <button type="button" class="btn btn-secondary" id="btn_next">Next >></button>
+        </div>
+      </div>
+      <!-- for High Score Table -->
+      <div class="div_right">
+        <div class="div_scores_table"></div>
+      </div>
+    </div>
+
+    <!-- import scripts file -->
+    <script src="fq_scripts.js"></script>
+  </body>
+</html>

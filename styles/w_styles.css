@@ -6,6 +6,14 @@
 
  */
 
+/* for main work sample title */
+#h1_ws_title {
+  font-size: 45px;
+  background: -webkit-linear-gradient(right, red, orange, green, blue, indigo, violet, red, orange, green, blue, indigo, violet, red, orange, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* for work sample main div */
 .div_ws_main {
   display: flex;
@@ -15,7 +23,7 @@
 }
 
 .div_ws_main img {
-  transition: width 2s, height 2s, transform 2s;
+  transition: width 2s, height 2s, transform 1.5s;
 }
 .div_ws_main img:hover {
   width: 350px;

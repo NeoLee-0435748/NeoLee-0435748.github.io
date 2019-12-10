@@ -6,7 +6,7 @@
 
  */
 /* Global variables and constant variables ---------------------------------- */
-const INTERVAL_FOR_MAIN_DIV = 2000; // 2 seconds
+const INTERVAL_FOR_MAIN_DIV = 3000; // 2 seconds
 const MIN_WORK_SAMPLE = 1; // start sample
 const MAX_WORK_SAMPLE = 8; // total samples
 var currentWorkSample = MIN_WORK_SAMPLE;
@@ -53,6 +53,11 @@ function changeMainWorkSample() {
   let elePrevDivSubWorkSample = document.getElementsByClassName(strPrevDivSubWorkSample)[0];
   let eleCurrDivSubWorkSample = document.getElementsByClassName(strCurrDivSubWorkSample)[0];
 
+  // get image element from current work sample
+  let eleCurrImg = eleCurrDivSubWorkSample.querySelector("img");
+  document.getElementById("h1_ws_title").innerHTML = `[ ${eleCurrImg.alt} ]`;
+
+  // set current work sample to main work sample
   eleDivMainWorkSample.innerHTML = eleCurrDivSubWorkSample.innerHTML;
   eleCurrDivSubWorkSample.style.display = "none";
   elePrevDivSubWorkSample.style.display = "inherit";

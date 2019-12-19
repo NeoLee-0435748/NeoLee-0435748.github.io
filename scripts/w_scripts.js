@@ -6,9 +6,9 @@
 
  */
 /* Global variables and constant variables ---------------------------------- */
-const INTERVAL_FOR_MAIN_DIV = 3000; // 2 seconds
+const INTERVAL_FOR_MAIN_DIV = 3000; // 3 seconds
 const MIN_WORK_SAMPLE = 1; // start sample
-const MAX_WORK_SAMPLE = 8; // total samples
+const MAX_WORK_SAMPLE = 9; // total samples
 var currentWorkSample = MIN_WORK_SAMPLE;
 
 /* error handling ----------------------------------------------------------- */

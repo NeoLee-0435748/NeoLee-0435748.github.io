@@ -1,0 +1,121 @@
+/*
+  Student Name:   Neo Lee(W0435748)
+  Date:           Dec 18, 2019  
+  Program Title:  The Itsy Bitsy Aardvark Game (Web version)
+*/
+
+/*
+----------------------------------------------------- 
+ Reset Style Sheet                                          
+-----------------------------------------------------
+*/
+address,
+article,
+aside,
+blockquote,
+body,
+cite,
+div,
+dl,
+dt,
+dd,
+em,
+figcaption,
+figure,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+img,
+li,
+main,
+nav,
+ol,
+p,
+section,
+span,
+ul {
+  background: transparent;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/*
+----------------------------------------------------- 
+ layout define                                            
+-----------------------------------------------------
+*/
+
+/* define body part */
+body {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  /* min-width: 640px;
+  max-width: 960px; */
+  background-color: rgb(197, 211, 216);
+}
+
+/* define grid for 3 sections */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 150px 2fr;
+  grid-template-rows: auto;
+}
+
+.middle_panel {
+  align-items: end;
+}
+
+/*
+----------------------------------------------------- 
+ font define
+-----------------------------------------------------
+*/
+
+/*
+----------------------------------------------------- 
+ each section styling
+-----------------------------------------------------
+*/
+
+/* body section ------------------------------------- */
+body h1 {
+  font-family: "Bangers", cursive;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* left section ------------------------------------- */
+#h3_question {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* middle section ------------------------------------- */
+#btn_next {
+  height: 10rem;
+  margin-top: 1rem;
+}
+
+#btn_again {
+  width: 57%;
+  height: 3rem;
+  margin-top: 1rem;
+}
+
+/* right section ------------------------------------- */
+.p_result {
+  font-family: "Lakki Reddy", cursive;
+  font-size: 1.5rem;
+  color: darkmagenta;
+}

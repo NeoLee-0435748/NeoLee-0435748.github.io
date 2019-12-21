@@ -1,0 +1,15 @@
+{
+  "workbench.colorTheme": "Atom One Dark",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 5000,
+  "editor.fontFamily": "Consolas, 'Courier New', monospace",
+  "editor.fontSize": 15,
+  "javascript.suggestionActions.enabled": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Set the default
+  "editor.formatOnSave": true,
+  // For ESLint
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}

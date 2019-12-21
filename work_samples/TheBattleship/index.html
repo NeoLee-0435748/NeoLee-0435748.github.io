@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>The Battleship Game</title>
+
+    <!-- import script files -->
+    <link href="./styles/styles.css" rel="stylesheet" />
+  </head>
+  <!--
+  Student Name:   Neo Lee(W0435748)
+  Date:           Dec 20, 2019  
+  Program Title:  The Battleship Game (Web version)
+  Description:    On application start, your code will read the contents of the provided ship grid text file into a two-dimensional array in your program.
+                  This ship map will be used as the “key”, indicating the locations of the five ships used in the game. 
+                  Zeros (0) indicate empty water, while ones (1) indicate part of a ship exists at that location. 
+                  The ship map will remain invisible to the user during gameplay. 
+                  A second map (the targeting map) will be displayed to the user each turn, 
+                  and will be used to show the targeting results of the current game turn by turn. 
+                  The initial display of the targeting map will be blank except for the row and column indicators (Columns A, B, C, Rows 1, 2, 3, etc.).
+  
+                  The user will be given 30 turns to attempt to sink all five ships. 
+                  During each turn, the user will be prompted to enter a map coordinate (ex. A2, F5, B10) representing the location at which they wish to fire a missile. 
+                  After each missile shot attempt, your program will evaluate whether the chosen coordinate is a hit or a miss and notify the user of the result. 
+                  The targeting map will be updated to show the latest missile result and be shown to the user. 
+                  A message indicating the current missile count will also be displayed, used to tell the player how many turns remain.
+  
+                  Only valid targeting coordinates are allowed to be entered. 
+                  If an invalid coordinate value is entered, the user will be prompted to re-enter a new coordinate until a valid coordinate is entered.
+  
+                  The game has two ending conditions: 
+                  •	If the user hits every individual location in the map that contains part of a ship before running out of missiles, 
+                      they win the game. 
+                  •	If the user runs out of missiles before hitting every part of every ship, they lose the game.
+  
+                  Your program should track the game’s progress and display either a “You win!” or “You lose!” message 
+                  when either game ending condition is reached.
+  
+  -->
+  <body>
+    <header>
+      <h1>The Battleship Game</h1>
+    </header>
+    <div class="container">
+      <section class="battle">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>A</th>
+              <th>B</th>
+              <th>C</th>
+              <th>D</th>
+              <th>E</th>
+              <th>F</th>
+              <th>G</th>
+              <th>H</th>
+              <th>I</th>
+              <th>J</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- first row -->
+            <tr>
+              <td>1</td>
+              <td><button id="row0col0">&nbsp;</button></td>
+              <td><button id="row0col1">&nbsp;</button></td>
+              <td><button id="row0col2">&nbsp;</button></td>
+              <td><button id="row0col3">&nbsp;</button></td>
+              <td><button id="row0col4">&nbsp;</button></td>
+              <td><button id="row0col5">&nbsp;</button></td>
+              <td><button id="row0col6">&nbsp;</button></td>
+              <td><button id="row0col7">&nbsp;</button></td>
+              <td><button id="row0col8">&nbsp;</button></td>
+              <td><button id="row0col9">&nbsp;</button></td>
+            </tr>
+            <!-- second row -->
+            <tr>
+              <td>2</td>
+              <td><button id="row1col0">&nbsp;</button></td>
+              <td><button id="row1col1">&nbsp;</button></td>
+              <td><button id="row1col2">&nbsp;</button></td>
+              <td><button id="row1col3">&nbsp;</button></td>
+              <td><button id="row1col4">&nbsp;</button></td>
+              <td><button id="row1col5">&nbsp;</button></td>
+              <td><button id="row1col6">&nbsp;</button></td>
+              <td><button id="row1col7">&nbsp;</button></td>
+              <td><button id="row1col8">&nbsp;</button></td>
+              <td><button id="row1col9">&nbsp;</button></td>
+            </tr>
+            <!-- third row -->
+            <tr>
+              <td>3</td>
+              <td><button id="row2col0">&nbsp;</button></td>
+              <td><button id="row2col1">&nbsp;</button></td>
+              <td><button id="row2col2">&nbsp;</button></td>
+              <td><button id="row2col3">&nbsp;</button></td>
+              <td><button id="row2col4">&nbsp;</button></td>
+              <td><button id="row2col5">&nbsp;</button></td>
+              <td><button id="row2col6">&nbsp;</button></td>
+              <td><button id="row2col7">&nbsp;</button></td>
+              <td><button id="row2col8">&nbsp;</button></td>
+              <td><button id="row2col9">&nbsp;</button></td>
+            </tr>
+            <!-- fourth row -->
+            <tr>
+              <td>4</td>
+              <td><button id="row3col0">&nbsp;</button></td>
+              <td><button id="row3col1">&nbsp;</button></td>
+              <td><button id="row3col2">&nbsp;</button></td>
+              <td><button id="row3col3">&nbsp;</button></td>
+              <td><button id="row3col4">&nbsp;</button></td>
+              <td><button id="row3col5">&nbsp;</button></td>
+              <td><button id="row3col6">&nbsp;</button></td>
+              <td><button id="row3col7">&nbsp;</button></td>
+              <td><button id="row3col8">&nbsp;</button></td>
+              <td><button id="row3col9">&nbsp;</button></td>
+            </tr>
+            <!-- fifth row -->
+            <tr>
+              <td>5</td>
+              <td><button id="row4col0">&nbsp;</button></td>
+              <td><button id="row4col1">&nbsp;</button></td>
+              <td><button id="row4col2">&nbsp;</button></td>
+              <td><button id="row4col3">&nbsp;</button></td>
+              <td><button id="row4col4">&nbsp;</button></td>
+              <td><button id="row4col5">&nbsp;</button></td>
+              <td><button id="row4col6">&nbsp;</button></td>
+              <td><button id="row4col7">&nbsp;</button></td>
+              <td><button id="row4col8">&nbsp;</button></td>
+              <td><button id="row4col9">&nbsp;</button></td>
+            </tr>
+            <!-- sixth row -->
+            <tr>
+              <td>6</td>
+              <td><button id="row5col0">&nbsp;</button></td>
+              <td><button id="row5col1">&nbsp;</button></td>
+              <td><button id="row5col2">&nbsp;</button></td>
+              <td><button id="row5col3">&nbsp;</button></td>
+              <td><button id="row5col4">&nbsp;</button></td>
+              <td><button id="row5col5">&nbsp;</button></td>
+              <td><button id="row5col6">&nbsp;</button></td>
+              <td><button id="row5col7">&nbsp;</button></td>
+              <td><button id="row5col8">&nbsp;</button></td>
+              <td><button id="row5col9">&nbsp;</button></td>
+            </tr>
+            <!-- third row -->
+            <tr>
+              <td>7</td>
+              <td><button id="row6col0">&nbsp;</button></td>
+              <td><button id="row6col1">&nbsp;</button></td>
+              <td><button id="row6col2">&nbsp;</button></td>
+              <td><button id="row6col3">&nbsp;</button></td>
+              <td><button id="row6col4">&nbsp;</button></td>
+              <td><button id="row6col5">&nbsp;</button></td>
+              <td><button id="row6col6">&nbsp;</button></td>
+              <td><button id="row6col7">&nbsp;</button></td>
+              <td><button id="row6col8">&nbsp;</button></td>
+              <td><button id="row6col9">&nbsp;</button></td>
+            </tr>
+            <!-- eighth row -->
+            <tr>
+              <td>8</td>
+              <td><button id="row7col0">&nbsp;</button></td>
+              <td><button id="row7col1">&nbsp;</button></td>
+              <td><button id="row7col2">&nbsp;</button></td>
+              <td><button id="row7col3">&nbsp;</button></td>
+              <td><button id="row7col4">&nbsp;</button></td>
+              <td><button id="row7col5">&nbsp;</button></td>
+              <td><button id="row7col6">&nbsp;</button></td>
+              <td><button id="row7col7">&nbsp;</button></td>
+              <td><button id="row7col8">&nbsp;</button></td>
+              <td><button id="row7col9">&nbsp;</button></td>
+            </tr>
+            <!-- nineth row -->
+            <tr>
+              <td>9</td>
+              <td><button id="row8col0">&nbsp;</button></td>
+              <td><button id="row8col1">&nbsp;</button></td>
+              <td><button id="row8col2">&nbsp;</button></td>
+              <td><button id="row8col3">&nbsp;</button></td>
+              <td><button id="row8col4">&nbsp;</button></td>
+              <td><button id="row8col5">&nbsp;</button></td>
+              <td><button id="row8col6">&nbsp;</button></td>
+              <td><button id="row8col7">&nbsp;</button></td>
+              <td><button id="row8col8">&nbsp;</button></td>
+              <td><button id="row8col9">&nbsp;</button></td>
+            </tr>
+            <!-- tenth row -->
+            <tr>
+              <td>10</td>
+              <td><button id="row9col0">&nbsp;</button></td>
+              <td><button id="row9col1">&nbsp;</button></td>
+              <td><button id="row9col2">&nbsp;</button></td>
+              <td><button id="row9col3">&nbsp;</button></td>
+              <td><button id="row9col4">&nbsp;</button></td>
+              <td><button id="row9col5">&nbsp;</button></td>
+              <td><button id="row9col6">&nbsp;</button></td>
+              <td><button id="row9col7">&nbsp;</button></td>
+              <td><button id="row9col8">&nbsp;</button></td>
+              <td><button id="row9col9">&nbsp;</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="result">
+        <h3 id="missile_title">Missile:</h3>
+        <p id="missile_cnt">&nbsp;</p>
+        <h3 id="hit_title">Hit:</h3>
+        <p id="hit_cnt">&nbsp;</p>
+        <h3 id="miss_title">Miss:</h3>
+        <p id="miss_cnt">&nbsp;</p>
+      </section>
+      <section class="direction">
+        <h2>Directions:</h2>
+        <blockquote>
+          You have only 30 turns to attempt to sink all five ships. During each turn, you can pick one of a map coordinate representing the location
+          at which you wish to fire a missile. After each missile shot attempt, your program will know whether the chosen coordinate is a hit or a
+          miss. The targeting map will be updated to show the latest missile result and be shown to you. A message indicating the current missile
+          count will also be displayed, used to tell you how many turns remain.
+        </blockquote>
+        <br />
+        <blockquote>
+          If a picked coordinate value is picked, your pick is invalid until a valid coordinate is picked.
+        </blockquote>
+        <br />
+        <blockquote>
+          <p>The game has two ending conditions:</p>
+          <p>
+            &nbsp;• If you hits every individual location in the map that contains part of a ship before running out of missiles, you win the game.
+          </p>
+          <p>&nbsp;• If you runs out of missiles before hitting every part of every ship, you lose the game.</p>
+        </blockquote>
+      </section>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2 class="modal-header-title">Message</h2>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the Modal Body</p>
+          <p>Some other text...</p>
+        </div>
+        <!-- <div class="modal-footer">
+          <button id="restart">Restart</button>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- import scripts files -->
+    <script src="./scripts/papaparse.min.js"></script>
+    <script src="./scripts/scripts.js"></script>
+  </body>
+</html>

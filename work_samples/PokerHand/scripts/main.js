@@ -197,9 +197,9 @@
     console.log(cardCord);
 
     // test data
-    // cardCord = ["0S","AS","JS","KS","QS"];  // Royal flash
-    // cardCord = ["4S","5S","6S","7S","8S"];  // Splash flash
-    // cardCord = ["3S","8S","AS","JS","KS"];  // flash
+    // cardCord = ["0S","AS","JS","KS","QS"];  // Royal flush
+    // cardCord = ["4S","5S","6S","7S","8S"];  // Splash flush
+    // cardCord = ["3S","8S","AS","JS","KS"];  // flush
     // cardCord = ["7D","JH","JD","JC","JS"];  // Four of a kind
     // cardCord = ["0H","0D","0S","9C","9D"];  // full house
     // cardCord = ["3D","7C","7D","7S","KC"];  // three of a kind
@@ -313,7 +313,7 @@
       for (let i = 0; i < cardCord.length - 1; i++) {
         // check each card
         if (numValues[i] + 1 !== numValues[i + 1]) {
-          if (!(i === cardCord.length - 2 && numValues[i + 1] === 14)) {
+          if (!(i === cardCord.length - 2 && numValues[i] === 5 && numValues[i + 1] === 14)) {
             // case for A, 2, 3, 4, 5
             if (numValues[4] <= 10) {
               // 2 ~ 10

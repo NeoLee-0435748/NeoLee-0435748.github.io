@@ -1,0 +1,86 @@
+/*
+  title:  Earthquakes in the world
+  date:   April 3, 2020
+  Author: Neo Lee (w0435748)
+  Desc:   PROG2700 final project
+          Display the map for earthquakes during the specific period and also provide table version
+          (following all guidelines from the assignment directions)
+  Ref:    https://www.w3.org/Style/Examples/007/center.en.html - elements positioning
+          https://sass-lang.com/guide - SASS guide
+
+*/
+@font-face {
+  font-family: 'EarthQuake';
+  src: url("../fonts/EarthquakeMf-K0GX.ttf") format("truetype");
+}
+
+body {
+  margin-left: 0px;
+  background-color: #f5faf5;
+}
+
+#title {
+  margin-left: 7px;
+  margin-bottom: 10px;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f58739;
+}
+
+#title h1 {
+  font-family: EarthQuake, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 3.5rem;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #f58739;
+}
+
+#search-opt {
+  margin-left: 7px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  outline: 2px dotted black;
+}
+
+#search-opt table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+#search-opt table td {
+  text-align: center;
+  width: 20%;
+}
+
+#list-detail {
+  margin-left: 7px;
+}
+
+#list-detail table {
+  border-collapse: collapse;
+  border: 1px solid blue;
+}
+
+#list-detail table th {
+  border: 1px solid blue;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#list-detail table tr:nth-child(even) {
+  background-color: #e2e2e2;
+}
+
+#list-detail table td {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/*# sourceMappingURL=main.css.map */

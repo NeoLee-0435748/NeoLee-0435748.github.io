@@ -1,0 +1,38 @@
+/* style for table */
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid black;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  vertical-align: middle;
+  color: red;
+  font-size: 2rem;
+}
+
+/* style for each cell: when it is clicked */
+.state-empty {
+  background-color: gray;
+}
+
+.state-1 {
+  background-color: blue;
+}
+
+.state-2 {
+  background-color: white;
+}
+
+/* style for detail */
+h2 {
+  color: lightsalmon;
+}
+
+hr {
+  width: 300px;
+  text-align: left;
+  margin-left: 0;
+}

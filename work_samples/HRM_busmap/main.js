@@ -1,4 +1,4 @@
-(function() {
+(function () {
   //declare global variables
   //json data
   var savedJson;
@@ -11,13 +11,13 @@
     iconUrl: "bus.png",
     iconSize: [35, 35],
     iconAnchor: [18, 25],
-    popupAnchor: [0, -25]
+    popupAnchor: [0, -25],
   });
 
   //geoJSON data
   var geojsonFeature = {
     type: "FeatureCollection",
-    features: []
+    features: [],
   };
 
   //geoJSON result data
@@ -33,17 +33,23 @@
   var map = L.map("theMap").setView([44.690627, -63.60914], 12);
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map);
 
   //display bus routes in 1 - 10
   const displayBusRoutes = () => {
     //Fetch real-time transit data information data from a publicly available API. (Flight or Bus data)
-    fetch("https://hrmbuses.herokuapp.com/")
-      .then(response => response.json())
-      .then(json => {
+
+    fetch("https://hrmbuses.herokuapp.com/", {
+      mode: "no-cors", // 'cors' by default
+    })
+      .then((response) => response.json())
+      .then((json) => {
         savedJson = json;
         filterRawData();
+      })
+      .catch((error) => {
+        console.log("Looks like there was a problem: \n", error);
       });
   };
 
@@ -55,7 +61,7 @@
 
     //print original data
     console.log(savedJson);
-    const cb = entityData => {
+    const cb = (entityData) => {
       if (selectedBusRoute === "") {
         return true;
       } else {
@@ -74,7 +80,7 @@
     let optionsHTML = `<option value="">All routes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>`;
 
     // make route list
-    const cb = entityData => entityData.vehicle.trip.routeId;
+    const cb = (entityData) => entityData.vehicle.trip.routeId;
 
     let routesObj = savedJson.entity.map(cb);
     // console.log(routesObj);
@@ -90,7 +96,7 @@
     let sortedRoutes = routesObj.filter(cb1).sort(cb2);
     // console.log(sortedRoutes);
 
-    const cb3 = routes => `<option value="${routes}">Route ${routes}</option>`;
+    const cb3 = (routes) => `<option value="${routes}">Route ${routes}</option>`;
 
     optionsHTML += sortedRoutes.map(cb3);
 
@@ -102,7 +108,7 @@
   //      https://scotch.io/bar-talk/copying-objects-in-javascript
   //      https://leafletjs.com/reference-1.6.0.html#marker
   //      https://github.com/Leaflet/Leaflet/issues/3238
-  const createGeoJSONData = rawData => {
+  const createGeoJSONData = (rawData) => {
     // console.log(rawData);
     // clear all previous markers
     if (geoJSONResult) {
@@ -115,16 +121,16 @@
       properties: {
         tripId: "",
         bearing: 0,
-        popupContent: "" // label:XXX, Speed:XXX
+        popupContent: "", // label:XXX, Speed:XXX
       },
       geometry: {
         type: "Point",
-        coordinates: []
-      }
+        coordinates: [],
+      },
     };
 
     //make a all feature data for the buses in route 1 to 10
-    const cb = rawData => {
+    const cb = (rawData) => {
       //set properties data
       featureData.properties.tripId = rawData.vehicle.trip.tripId;
       featureData.properties.bearing = rawData.vehicle.position.bearing ? rawData.vehicle.position.bearing : 0;
@@ -165,7 +171,7 @@
     //Plot markers on the map to display the current position of vehicles.
     geoJSONResult = L.geoJSON(geojsonFeature, {
       onEachFeature: fnOnEachFeature,
-      pointToLayer: fnPointToLayer
+      pointToLayer: fnPointToLayer,
     }).addTo(map);
 
     // each 7 seconds after receiving data, redraw the map with new data
@@ -176,7 +182,7 @@
   displayBusRoutes();
 
   //select event
-  const changedSelectRoute = event => {
+  const changedSelectRoute = (event) => {
     console.log("select onchange");
     //kill the previous timer
     if (myTimer) clearTimeout(myTimer);

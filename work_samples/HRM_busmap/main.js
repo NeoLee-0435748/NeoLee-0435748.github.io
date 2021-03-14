@@ -40,9 +40,13 @@
   const displayBusRoutes = () => {
     //Fetch real-time transit data information data from a publicly available API. (Flight or Bus data)
 
-    fetch("https://hrmbuses.herokuapp.com/", {
-      mode: "no-cors", // 'cors' by default
-    })
+    fetch("https://hrmbusapi.herokuapp.com")
+      .then((response) => {
+        if (!response.ok) {
+          throw Error(response.statusText);
+        }
+        return response;
+      })
       .then((response) => response.json())
       .then((json) => {
         savedJson = json;
@@ -60,7 +64,6 @@
     geojsonFeature.features = [];
 
     //print original data
-    console.log(savedJson);
     const cb = (entityData) => {
       if (selectedBusRoute === "") {
         return true;
